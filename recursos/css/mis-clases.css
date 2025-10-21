@@ -85,7 +85,7 @@
 /* Responsivo */
 @media (max-width: 768px) {
     .container-grafica {
-        width: 60%;
+        width: 75%;
         padding: 15px;
         margin-right: 35px;
         margin-top: -2px;

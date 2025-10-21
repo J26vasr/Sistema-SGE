@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perfil-usuario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil Docente</title>
+  <link rel="stylesheet" href="../recursos/css/perfil-docente.css">
 </head>
-
 <body>
+  <div class="perfil-container">
+    
+    <!-- Encabezado -->
+    <div class="perfil-header">
+      <span class="institucion">Nombre de institución</span>
+      <div class="foto-container">
+        <div class="foto">Foto</div>
+      </div>
+    </div>
 
+    <!-- Contenido -->
+    <div class="perfil-info">
+      <div class="campo nombre">Nombre y apellido</div>
 
-    <div id="menu"></div>
+      <div class="info-grid">
+        <div class="campo">Nivel educativo</div>
+        <div class="campo">Asignaturas que imparte</div>
+        <div class="campo">Número de celular</div>
+      </div>
 
-    <section class="home">
-        <div class="text">Perfil</div>
-    </section>
-
+      <button class="btn-editar">Editar</button>
+    </div>
+  </div>
+   <div id="menu"></div>
     <script>
         // Cargar el menú de forma dinámica
         fetch("../vista/menu.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("menu").innerHTML = data;
-                // Si tu menú tiene JS propio, también puedes cargarlo aquí:
                 const script = document.createElement("script");
                 script.src = "../controladores/js/menu.js";
                 document.body.appendChild(script);
             });
     </script>
 </body>
-
 </html>
