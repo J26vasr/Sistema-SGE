@@ -55,6 +55,14 @@ body {
   font-weight: bold;
   color: #666;
 }
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+  border-radius: 50%; /* Mantiene la forma circular */
+  border: 2px solid #fff; /* Borde blanco opcional */
+}
+
 
 /* === Información === */
 .perfil-info {
@@ -104,8 +112,7 @@ body {
 /* === Responsivo === */
 @media (max-width: 900px) {
   .perfil-container {
-    margin-left: 0;
-    width: 95%;
+    width: 75%;
   }
 }
 

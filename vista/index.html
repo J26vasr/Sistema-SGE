@@ -111,6 +111,14 @@
 
 
     <script src="../controladores/js/menu.js"></script>
+    <script>
+  // Aplica modo oscuro inmediatamente si está activado
+  if (localStorage.getItem("darkMode") === "true") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+
 </body>
 
 </html>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="../recursos/css/dashboard.css">
+    <link rel="stylesheet" href="../recursos/css/menu.css">
 </head>
 
 <body>
@@ -13,7 +14,10 @@
     <!-- Menú dinámico -->
     <div id="menu"></div>
     <div class="container-saludo">
-      Bienvenid@ devuelta Veronica
+      <p class="texto-saludo-user"> Bienvenid@ devuelta Jeremy Castro</p>
+      <div class="foto">
+          <img src="../recursos/img/perfil.jpg" alt="Foto del docente">
+        </div>
     </div>
 
     <!-- Contenedor principal -->
@@ -23,7 +27,7 @@
       <div class="card">
         <img src="../recursos/img/book1.jfif" alt="Tarjeta 1">
         <div class="card-body">
-          <h3>Grados Asignados</h3>
+          <h3>Tareas por revisar</h3>
         </div>
       </div>
 
@@ -44,8 +48,15 @@
     </div>
 
     <script>
+  // Aplica modo oscuro inmediatamente si está activado
+  if (localStorage.getItem("darkMode") === "true") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+    <script>
         // Cargar el menú de forma dinámica
-        fetch("../vista/menu.html")
+        fetch("../vista/index.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("menu").innerHTML = data;
@@ -54,6 +65,8 @@
                 document.body.appendChild(script);
             });
     </script>
+    
+
 </body>
 
 </html>

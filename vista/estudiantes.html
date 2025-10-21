@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>estudiantes</title>
+    <link rel="stylesheet" href="../recursos/css/menu.css">
 </head>
 
 <body>
@@ -15,10 +16,17 @@
     <section class="home">
         <div class="text">Estudiantes</div>
     </section>
+    <script>
+  // Aplica modo oscuro inmediatamente si está activado
+  if (localStorage.getItem("darkMode") === "true") {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
 
     <script>
         // Cargar el menú de forma dinámica
-        fetch("../vista/menu.html")
+        fetch("../vista/index.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("menu").innerHTML = data;
