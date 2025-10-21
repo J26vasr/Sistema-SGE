@@ -1,11 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mis-clases</title>
 </head>
+
 <body>
-    
+
+
+    <div id="menu"></div>
+
+    <section class="home">
+        <div class="text">Mis Clases</div>
+    </section>
+
+    <script>
+        // Cargar el menú de forma dinámica
+        fetch("../vista/menu.html")
+            .then(res => res.text())
+            .then(data => {
+                document.getElementById("menu").innerHTML = data;
+                // Si tu menú tiene JS propio, también puedes cargarlo aquí:
+                const script = document.createElement("script");
+                script.src = "../controladores/js/menu.js";
+                document.body.appendChild(script);
+            });
+    </script>
 </body>
+
 </html>

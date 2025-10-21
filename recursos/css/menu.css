@@ -132,7 +132,7 @@ body.dark{
     color: var(--sidebar-color);
     display: flex;
     justify-content: center;
-    font-size: 35px;
+    font-size: 30px;
     cursor: pointer;
     transition: var(--tran-05);
 }
