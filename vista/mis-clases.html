@@ -64,7 +64,15 @@
     </div>
   </div>
 
-  <script src="../controladores/js/grafica.js"></script>
+  <!-- Contenedor de la gráfica -->
+  <div class="container-grafica">
+    <h2>📊 Tareas por revisar</h2>
+    <div class="grafica-wrapper">
+      <canvas id="TareasRevisar"></canvas>
+    </div>
+  </div>
+
+  
   <script>
   // Aplica modo oscuro inmediatamente si está activado
   if (localStorage.getItem("darkMode") === "true") {
@@ -84,6 +92,7 @@
         document.body.appendChild(script);
       });
   </script>
+  <script src="../controladores/js/grafica.js"></script>
 </body>
 
 </html>

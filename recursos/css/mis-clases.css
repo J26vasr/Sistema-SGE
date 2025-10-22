@@ -85,10 +85,10 @@
 /* Responsivo */
 @media (max-width: 768px) {
     .container-grafica {
-        width: 75%;
+        width: 70%;
         padding: 15px;
-        margin-right: 35px;
         margin-top: -2px;
+        margin-left: 120px;
     }
 
     .container-grafica h2 {
