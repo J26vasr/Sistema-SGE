@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../recursos/css/grados.css">
 </head>
 <body>
+  <!-- Menú lateral -->
+  <div id="menu"></div>
+
+  <!-- Contenedor principal -->
   <div class="container">
     <!-- Panel principal -->
     <div class="main">
@@ -14,38 +18,38 @@
         <h2>Resumen de Actividades</h2>
         <div class="stats">
           <div class="stat-box">
-            <h3>Total Horas</h3>
-            <p>748 hr</p>
+            <h3>Asistencia</h3>
+            <p>9 estudiantes han faltado</p>
           </div>
           <div class="stat-box">
-            <h3>Total Pasos</h3>
-            <p>9,178 St</p>
+            <h3>Tareas</h3>
+            <p>4 estudiantes no tienen entregas</p>
           </div>
           <div class="stat-box">
-            <h3>Meta</h3>
-            <p>9,200 St</p>
+            <h3>CUM del salon</h3>
+            <p>9.00</p>
           </div>
         </div>
       </div>
 
       <div class="cards">
         <div class="card">
-          <h3>Bicycle Drill</h3>
-          <p>36 km / semana</p>
+          <h3>Actividades por revisar</h3>
+          <p>5/40</p>
           <div class="progress-bar"><div class="progress" style="width:45%;"></div></div>
-          <p>45% completado</p>
+          <p>80% completado</p>
         </div>
 
         <div class="card">
-          <h3>Jogging Hero</h3>
-          <p>12 km / mes</p>
+          <h3>Tareas entregadas</h3>
+          <p>20/40</p>
           <div class="progress-bar"><div class="progress" style="width:13%;"></div></div>
           <p>13% completado</p>
         </div>
 
         <div class="card">
-          <h3>Healthy Busy</h3>
-          <p>3600 pasos / semana</p>
+          <h3>Proceso de clases</h3>
+          <p>enero/noviembre</p>
           <div class="progress-bar"><div class="progress" style="width:90%;"></div></div>
           <p>90% completado</p>
         </div>
@@ -53,7 +57,7 @@
     </div>
 
     <!-- Panel derecho (Lista estudiantes) -->
-    <div class="sidebar">
+    <div class="sidebar2">
       <h3>Lista de Estudiantes</h3>
       <div class="student-list">
         <div class="student">
@@ -101,5 +105,24 @@
       </div>
     </div>
   </div>
+
+  <!-- Scripts -->
+  <script>
+    // Aplica modo oscuro inmediatamente si está activado
+    if (localStorage.getItem("darkMode") === "true") {
+      document.documentElement.classList.add("dark");
+    }
+
+    // Cargar el menú de forma dinámica
+    fetch("../vista/menu.html")
+      .then(res => res.text())
+      .then(data => {
+        document.getElementById("menu").innerHTML = data;
+
+        const script = document.createElement("script");
+        script.src = "../controladores/js/menu.js";
+        document.body.appendChild(script);
+      });
+  </script>
 </body>
 </html>
