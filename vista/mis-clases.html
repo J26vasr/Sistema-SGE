@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mis-clases</title>
-  
-    <link rel="stylesheet" href="../recursos/css/menu.css">
+
+  <link rel="stylesheet" href="../recursos/css/menu.css">
   <link rel="stylesheet" href="../recursos/css/mis-clases.css">
   <link rel="stylesheet" href="../recursos/css/grafica.css">
   <!-- Agregamos Chart.js -->
@@ -15,36 +15,36 @@
 
 <body>
   <div class="buscador-container">
-  <input type="text" id="buscador" placeholder="🔍 Buscar grado..." />
-</div>
+    <input type="text" id="buscador" placeholder="🔍 Buscar grado..." />
+  </div>
   <!-- Contenedor principal -->
   <div class="container">
     <section class="cards">
-      <div class="card">
+      <div class="card" onclick="window.location.href='material.html'" style="cursor:pointer;">
         <img src="../recursos/img/7g.jpg" alt="7G">
         <div class="card-body">
           <h3>Septimo grado A</h3>
-          <p>56 Estudiantes </p>
+          <p>56 Estudiantes</p>
         </div>
       </div>
 
-      <div class="card">
-        <img src="../recursos/img/7g.jpg" alt="7G">
+      <div class="card" onclick="window.location.href='material.html'" style="cursor:pointer;">
+         <img src="../recursos/img/7g.jpg" alt="7G">
         <div class="card-body">
           <h3>Septimo grado C</h3>
           <p>56 Estudiantes </p>
         </div>
       </div>
 
-      <div class="card">
-        <img src="../recursos/img/8g.jpg" alt="8G">
+      <div class="card" onclick="window.location.href='material.html'" style="cursor:pointer;">
+       <img src="../recursos/img/8g.jpg" alt="8G">
         <div class="card-body">
           <h3>Octavo grado D</h3>
           <p>68 Estudiantes </p>
         </div>
       </div>
 
-      <div class="card">
+     <div class="card" onclick="window.location.href='material.html'" style="cursor:pointer;">
         <img src="../recursos/img/9g.jpg" alt="9G">
         <div class="card-body">
           <h3>Noveno Grado</h3>
@@ -72,13 +72,13 @@
     </div>
   </div>
 
-  
+
   <script>
-  // Aplica modo oscuro inmediatamente si está activado
-  if (localStorage.getItem("darkMode") === "true") {
-    document.documentElement.classList.add("dark");
-  }
-</script>
+    // Aplica modo oscuro inmediatamente si está activado
+    if (localStorage.getItem("darkMode") === "true") {
+      document.documentElement.classList.add("dark");
+    }
+  </script>
 
 
   <script>
