@@ -29,7 +29,7 @@
           </div>
           <div class="footer">
             <p><strong>Start:</strong> 20 July</p>
-            <button>View More</button>
+            <a href="../vista/7A.html" class="btn-view">View More</a>
           </div>
         </div>
       </div>
@@ -91,7 +91,7 @@
 
     <script>
         // Cargar el menú de forma dinámica
-        fetch("../vista/index.html")
+        fetch("../vista/menu.html")
             .then(res => res.text())
             .then(data => {
                 document.getElementById("menu").innerHTML = data;

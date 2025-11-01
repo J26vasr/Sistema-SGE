@@ -148,6 +148,25 @@ body {
     gap: 10px;
   }
 }
+.btn-view {
+  display: inline-block;
+  background: linear-gradient(135deg, #6b4eff, #9d7dff);
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-view:hover {
+  background: linear-gradient(135deg, #5a3ce3, #8c6cf5);
+  transform: translateY(-2px);
+}
+
 
 /* --- RESPONSIVE: de 664px en adelante -> 2 columnas --- */
 @media (min-width: 664px) and (max-width: 90px) {

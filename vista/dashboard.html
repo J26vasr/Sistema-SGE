@@ -60,17 +60,21 @@
   }
 </script>
 
-    <script>
-        // Cargar el menú de forma dinámica
-        fetch("../vista/index.html")
-            .then(res => res.text())
-            .then(data => {
-                document.getElementById("menu").innerHTML = data;
-                const script = document.createElement("script");
-                script.src = "../controladores/js/menu.js";
-                document.body.appendChild(script);
-            });
-    </script>
+  <!-- Menú dinámico -->
+<div id="menu"></div>
+
+<script>
+  // Cargar el menú desde menu.html
+  fetch("../vista/menu.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("menu").innerHTML = data;
+      const script = document.createElement("script");
+      script.src = "../controladores/js/menu.js";
+      document.body.appendChild(script);
+    });
+</script>
+
     
 
 </body>

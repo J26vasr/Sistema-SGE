@@ -4,121 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menu</title>
-    <link rel="stylesheet" href="../recursos/css/menu.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Login - SGE</title>
+    <link rel="stylesheet" href="../recursos/css/login.css">
 </head>
 
 <body>
-    <nav class="sidebar close">
-        <header>
-
-            <div class="text logo">
-                <span class="name">SGE</span>
-                <span class="profe">Sistema De Gestión Estudiantil</span>
-
-            </div>
-            <i class="bx bxs-book toggle icon"></i>
-
-        </header>
-
-        <div class="menu-bar">
-            <div class="menu">
-                <li class="search-box">
-                </li>
-
-                <ul class="menu-links">
-                    <li class="nav-link">
-                        <a href="../vista/dashboard.html">
-
-                            <i class="bx bx-home-alt icon"></i>
-                            <span class="text nav-text">Dashboard</span>
-                        </a>
-
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/mis-clases.html">
-                            <i class="bx bx-book-bookmark icon"></i>
-                            <span class="text nav-text">Mis clases</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/estudiantes.html">
-                            <i class="bx bx-user icon"></i>
-                            <span class="text nav-text">Estudiantes</span>
-                        </a>
-
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/calificaciones.html">
-                            <i class="bx bx-star icon"></i>
-                            <span class="text nav-text">Calificaciones</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/asistencia-estudiantes.html">
-                            <i class="bx bx-calendar-check icon"></i>
-
-                            <span class="text nav-text">Asistencia</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/reportes-estudiantes.html">
-                            <i class="bx bxs-collection icon"></i>
-                            <span class="text nav-text">Reportes</span>
-                        </a>
-                    </li>
-
-                    <li class="nav-link">
-                        <a href="../vista/perfil-usuario.html">
-                            <i class="bx bx-user-circle icon"></i>
-                            <span class="text nav-text">Mi Perfil</span>
-                        </a>
-                    </li>
-
-
-                </ul>
-
-            </div>
-            <div class="bottom-content">
-                <li class="">
-                    <a href="#">
-                        <i class="bx bx-log-out icon"></i>
-                        <span class="text nav-text">Salir</span>
-                    </a>
-                </li>
-                <li class="mode">
-                    <div class="sun-moon">
-                        <i class="bx bx-moon icon moon"></i>
-                        <i class="bx bx-sun icon sun"></i>
-                    </div>
-                    <span class="mode-text text">Modo oscuro</span>
-                    <div class="toggle-swtich">
-                        <span class="swtich"></span>
-                    </div>
-                </li>
-            </div>
-
-
+    <div class="login-container">
+        <div class="login-header">
+            <div class="logo-placeholder">SGE</div>
+            <h1>Sistema de Gestión De Notas</h1>
+            <p>Inicia sesión para continuar</p>
         </div>
-    </nav>
+
+        <div class="login-form">
+            <div class="form-group">
+                <label for="username">Usuario (Código o Email)</label>
+                <input type="text" id="username" placeholder="Ingresa tu código o correo" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Contraseña</label>
+                <input type="password" id="password" placeholder="Ingresa tu contraseña" required>
+            </div>
+
+            <a href="../vista/dashboard.html">
+                <button id="loginBtn" class="btn-login">Iniciar Sesión</button>
+            </a>
 
 
+            <div id="error" class="error-message"></div>
+        </div>
+    </div>
 
-    <script src="../controladores/js/menu.js"></script>
-    <script>
-  // Aplica modo oscuro inmediatamente si está activado
-  if (localStorage.getItem("darkMode") === "true") {
-    document.documentElement.classList.add("dark");
-  }
-</script>
-
-
+    <script src="login.js"></script>
 </body>
 
 </html>
