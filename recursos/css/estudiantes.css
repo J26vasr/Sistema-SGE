@@ -11,10 +11,70 @@ body {
   display: flex;
   justify-content: center;
 }
+/* ======= TITULO SUPERIOR ======= */
+.TituloGrado {
+  position: fixed;
+  top: 0;
+  left: 80px; /* deja espacio para el menú lateral */
+  right: 0;
+  height: 70px; /* un poco más alto */
+  background: linear-gradient(135deg, #6b4eff, #9d7dff);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 998;
+  transition: left 0.3s ease;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+body.menu-expanded .TituloGrado {
+  left: 260px; /* se ajusta si el menú se expande */
+}
+
+/* Ajustar el contenido para que no quede debajo del título */
+.container {
+  margin-top: 90px; /* espacio suficiente para el título */
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .TituloGrado {
+    left: 90px;
+    height: 55px;
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .container {
+    margin-top: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .TituloGrado {
+    left: 0; /* el título ocupa todo el ancho */
+    height: 55px;
+    border-radius: 0;
+    font-size: 1.1rem;
+  }
+
+  .container {
+    margin-top: 70px;
+  }
+}
+
 
 .container {
   max-width: 1100px;
   width: 100%;
+  margin-top: -20px;
 }
 
 .container h2 {

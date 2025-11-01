@@ -1,7 +1,8 @@
 /* === CONTENEDOR DE SALUDO === */
 .container-saludo {
     width: calc(100% - 260px); /* deja espacio para el menú lateral */
-    background: linear-gradient(90deg, #c49bf6, #b57bee);
+
+  background: linear-gradient(135deg, #6b4eff, #9d7dff);
     color: #fff;
     font-size: 1.3rem;
     font-weight: 500;
